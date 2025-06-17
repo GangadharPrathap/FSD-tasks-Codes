@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Road Scene Drawing task</title>
+  <style>
+    body {
+      margin: 0;
+      background: #fff;
+      position: relative;
+      height: 500px;
+    }
+    .road {
+      position: absolute;
+      top: 180px;
+      left: 20px;
+      width: 750px;
+      height: 140px;
+      background: #111;
+      z-index: 1;
+    }
+    .dash {
+      position: absolute;
+      top: 240px;
+      width: 90px;
+      height: 30px;
+      background: #aaa;
+      z-index: 2;
+    }
+    .dash1 { left: 60px; }
+    .dash2 { left: 180px; }
+    .dash3 { left: 300px; }
+    .dash4 { left: 420px; }
+
+    .tree {
+      position: absolute;
+      z-index: 3;
+    }
+    .trunk {
+      width: 30px;
+      height: 90px;
+      background: #b97a56;
+      position: absolute;
+      left: 10px;
+      top: 70px;
+      z-index: 3;
+    }
+    .leaves {
+      position: absolute;
+      top: 40px;
+      left: 0;
+      z-index: 4;
+    }
+    .leaf {
+      width: 34px;
+      height: 34px;
+      background: #3fa34d;
+      border-radius: 50%;
+      position: absolute;
+      border: 2px solid #222;
+    }
+    .leaf1 { top: 0; left: 0; }
+    .leaf2 { top: 0; left: 18px; }
+    .leaf3 { top: -16px; left: 9px; }
+
+    .tree1 { left: 40px; }
+    .tree2 { left: 110px; }
+
+    .sun {
+      position: absolute;
+      top: 30px;
+      left: 540px;
+      width: 90px;
+      height: 60px;
+      background: orange;
+      border-radius: 50%;
+      border: 3px solid #222;
+      z-index: 5;
+    }
+    .ray {
+      position: absolute;
+      width: 30px;
+      height: 2px;
+      background: #222;
+      z-index: 6;
+    }
+    .ray1 { top: 15px; left: 580px; transform: rotate(90deg);}
+    .ray2 { top: 25px; left: 615px; transform: rotate(125deg);}
+    .ray3 { top: 95px; left: 525px; transform: rotate(135deg);}
+    .ray4 { top: 60px; left: 635px; transform: rotate(180deg);}
+    .ray5 { top: 100px; left: 610px; transform: rotate(225deg);}
+    .ray6 { top: 110px; left: 570px; transform: rotate(-90deg);}
+    .ray7 { top: 60px; left: 510px; transform: rotate(180deg);}
+    .ray8 { top: 25px; left: 532px; transform: rotate(240deg);}
+
+    .car-body {
+      position: absolute;
+      top: 200px;
+      left: 490px;
+      width: 120px;
+      height: 60px;
+      background: #8b1c1c;
+      z-index: 10;
+      border-right: 3px solid #fff;
+    }
+    .car-window {
+      position: absolute;
+      top: 170px;
+      left: 500px;
+      width: 45px;
+      height: 35px;
+      background: #fff;
+      border: 2px solid #222;
+      z-index: 12;
+    }
+    .car-window2 {
+      position: absolute;
+      top: 170px;
+      left: 547px;
+      width: 45px;
+      height: 35px;
+      background: #fff;
+      border: 2px solid #222;
+      z-index: 12;
+    }
+    .car-wheel {
+      position: absolute;
+      width: 38px;
+      height: 38px;
+      background: #555;
+      border-radius: 50%;
+      z-index: 11;
+      top: 250px;
+    }
+    .wheel1 { left: 515px; }
+    .wheel2 { left: 570px; }
+  </style>
+</head>
+<body>
+  <div class="tree tree1">
+    <div class="trunk"></div>
+    <div class="leaves">
+      <div class="leaf leaf1"></div>
+      <div class="leaf leaf2"></div>
+      <div class="leaf leaf3"></div>
+    </div>
+  </div>
+  <div class="tree tree2">
+    <div class="trunk"></div>
+    <div class="leaves">
+      <div class="leaf leaf1"></div>
+      <div class="leaf leaf2"></div>
+      <div class="leaf leaf3"></div>
+    </div>
+  </div>
+  <div class="sun"></div>
+  <div class="ray ray1"></div>
+  <div class="ray ray2"></div>
+  <div class="ray ray3"></div>
+  <div class="ray ray4"></div>
+  <div class="ray ray5"></div>
+  <div class="ray ray6"></div>
+  <div class="ray ray7"></div>
+  <div class="ray ray8"></div>
+  <div class="road"></div>
+  <div class="dash dash1"></div>
+  <div class="dash dash2"></div>
+  <div class="dash dash3"></div>
+  <div class="dash dash4"></div>
+  <div class="car-body"></div>
+  <div class="car-window"></div>
+  <div class="car-window2"></div>
+  <div class="car-wheel wheel1"></div>
+  <div class="car-wheel wheel2"></div>
+</body>
+</html>
