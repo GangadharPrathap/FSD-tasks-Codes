@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>03-06-2025 tasks</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: 'Roboto', sans-serif;
+        }
+        .kit {
+            width: 600px;
+            height: 650px;
+            border: 5px solid #333;
+            background-color: #222;
+            border-radius: 10px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+        }
+        .block1 {
+            width: 500px;
+            height: 400px;
+            background-color: #333;
+            position: relative;
+            top: 10px;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
+            border-radius: 10px;
+            gap: 8px;
+        }
+        .block1 button {
+            border: 2px solid #444;
+            background-color: #555;
+            color: white;
+            font-size: 24px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.1s, box-shadow 0.3s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            user-select: none;
+        }
+        .block1 button:hover {
+            background-color: #777;
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+        }
+        .display {
+            width: 500px;
+            border-radius: 10px;
+            height: 100px;
+            background-color: #00bcd4;
+            position: relative;
+            top: 5px;
+            font-size: 54px;
+            color: white;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            font-family: 'Orbitron', monospace;
+            box-shadow: 0 4px 15px rgba(0, 188, 212, 0.7);
+            text-shadow: 0 0 5px rgba(0,0,0,0.4);
+            padding-right: 20px;
+            letter-spacing: 2px;
+            user-select: none;
+        }
+        .equal {
+            width: 500px;
+            height: 100px;
+            position: relative;
+            top: 15px;
+            border-radius: 10px;
+            background-color: #ff9800;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            color: white;
+            font-size: 36px;
+            transition: background-color 0.3s, transform 0.1s, box-shadow 0.3s;
+            box-shadow: 0 6px 20px rgba(255, 152, 0, 0.7);
+            text-shadow: 0 0 5px rgba(0,0,0,0.4);
+            user-select: none;
+            border: none;
+        }
+        .equal:hover {
+            background-color: #fb8c00;
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(251, 140, 0, 0.9);
+        }
+        h1 {
+            color: #333;
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 20px;
+        }
+        /* Remove default button focus outlines but keep accessibility */
+        button:focus {
+            outline: 2px solid #00bcd4;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <h1>Task-1 (Calculator)</h1>
+    <div class="kit">
+        <div class="display" id="display">1234567890</div>
+        <div class="block1">
+            <button class="percen">%</button>
+            <button class="ce">CE</button>
+            <button class="c">C</button>
+            <button class="del">DEL</button>
+            <button class="num1">1</button>
+            <button class="num2">2</button>
+            <button class="num3">3</button>
+            <button class="num4">4</button>
+            <button class="num5">5</button>
+            <button class="num6">6</button>
+            <button class="num7">7</button>
+            <button class="num8">8</button>
+            <button class="num9">9</button>
+            <button class="num0">0</button>
+            <button class="num00">00</button>
+            <button class="dot">.</button>
+            <button class="plus">+</button>
+            <button class="minus">-</button>
+            <button class="into">*</button>
+            <button class="by">/</button>
+        </div>
+        <button class="equal" id="equal">=</button>
+    </div>
+</center>
+</body>
+</html>
