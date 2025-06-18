@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+        <title>Business Card</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "montserrat", sans-serif;
+    background-color: azure;
+}
+.cardw {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}.card {
+    width: 550px;
+    height: 300px;
+    background-color: rgb(158, 158, 134);
+    box-shadow: 0 10px 20px black;
+}
+.front{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    backface-visibility: hidden;
+    background: linear-gradient(rgb(255,255,255) 40%,
+    rgb(38,38,38 ) 0
+    );
+}.left{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.left img{
+    width: 80%;
+}
+.left h4{
+    margin: 10px;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+.left span{
+    text-transform: uppercase;
+    color: violet;
+}.right{
+    width: 60%;
+    color: aliceblue;
+}
+.right-content{
+    display: flex;
+    align-items: center;
+    margin: 20px 0 ;
+}.person{
+    background-color: violet;
+    padding: 5px 0 5px 30px;
+    margin: 30px 0;
+    box-shadow: 0 10px 20px pink;
+}
+.right-content i{
+    width: 35px;
+    height: 35px;
+    border:2px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: violet;
+    margin-right: 20px;
+}
+.person h4{
+    text-transform: uppercase;
+}.phone{
+    padding-left: 30px;
+}.email{
+    padding-left: 20px;
+}.Address{
+    padding-left: 10px;
+}.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+.back {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.back a {
+    color: #555;
+    font-size: 24px;
+    transition: color 0.2s;
+}
+ .back a:hover {
+    color: pink;
+}
+    </style>
+    </head>
+  <body>
+   <div class="cardw">
+    <div class="card">
+        <div class="front">
+            <div class="left">
+                <img src="mine.png" alt="else" width="150">
+                <h4><span>Web</span>designer</h4>
+            </div>
+
+            <div class="right">
+                <div class="person right-cont">
+                    <i class="fas fa-user-tie"></i>
+                    <div>
+                        <h4>D S S G Prathap</h4>
+                        <p>aka Prathap</p>
+                    </div>
+                </div>
+                <div class="phone right-cont">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <p>+91 8179098495</p>
+                    </div>
+                </div>
+                <div class="mail right-cont">
+                    <i class="fas fa-envelope-open"></i>
+                    <div>
+                        <p>Gangadharprathap0606@gmail.com</p>
+                    </div>
+                </div>
+                <div class="address right-cont">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <p>Yanam,Puducherry</p>
+                    </div>
+                </div>
+                <div class="back" >
+            <p>Contact me via:
+            </p>
+            <a href="https://github.com/GangadharPrathap"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-twitter-square"></i></a>
+            <a href="https://www.linkedin.com/in/d-s-s-gangadhara-prathap-a6a556349/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/23prathap09/"><i class="fab fa-instagram"></i></a>
+                </div>
+        </div>
+            
+        </div>
+        
+    </div>
+   </div>
+  </body>
+</html>
