@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>10-06-2025 Task</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: black;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .main {
+      width: 400px;
+      height: 500px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .para {
+      position: relative;
+      width: 300px;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .pa {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    .c1, .c2, .c3 {
+      position: fixed;
+      bottom: 30%;
+      left: 39%;
+      width: 500px;
+      height: 500px;
+      border: 2px solid white;
+      border-radius: 50%;
+      animation: rotate 5s linear infinite;
+    }
+
+    .c1 {
+      border-radius: 35% 35% 35% 35%;
+      animation-name: c1ani;
+    }
+
+    .c2 {
+      animation-name: c2ani;
+    }
+
+    .c3 {
+      border-top-left-radius: 90%;
+      border-bottom-left-radius: 35%;
+      border-bottom-right-radius: 45%;
+      border-top-right-radius: 50%;
+      animation-name: c3ani;
+    }
+
+    @keyframes c1ani {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes c2ani {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes c3ani {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .para:hover .c1 {
+      border: 3px solid yellow;
+      box-shadow: 0 0 10px 3px yellow;
+    }
+
+    .para:hover .c2 {
+      border: 3px solid pink;
+      box-shadow: 0 0 10px 3px pink;
+    }
+
+    .para:hover .c3 {
+      border: 3px solid cyan;
+      box-shadow: 0 0 10px 3px cyan;
+    }
+
+    .login {
+      width: 500px;
+      height: 100%;
+      position: relative;
+      bottom: 20px;
+      z-index: 2;
+      background-color: rgba(0, 0, 0,0);
+      border-radius: 30px;
+      padding: 30px 25px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .head h2 {
+      color: azure;
+    }
+
+    .t1, .t2 {
+      border: 2px solid white;
+      border-radius: 30px;
+      color: white;
+      width: 100%;
+      height: 35px;
+      background-color: rgb(4, 4, 4);
+      padding-left: 15px;
+    }
+
+    .checkbox-block {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      font-size: 13px;
+      color: white;
+    }
+
+    .show-pass {
+      cursor: pointer;
+    }
+
+    .sign {
+      border-radius: 30px;
+      color: white;
+      width: 100%;
+      height: 35px;
+      background: linear-gradient(to right, skyblue, rgb(223, 85, 187), rgb(235, 166, 37));
+      border: none;
+      cursor: pointer;
+    }
+
+    .google-btn {
+      border-radius: 30px;
+      color: black;
+      width: 100%;
+      height: 35px;
+      background-color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .forgot {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      font-size: 12px;
+      color: white;
+    }
+
+    .find, .sig {
+      cursor: pointer;
+    }
+
+    .extra-info {
+      color: lightgray;
+      font-size: 13px;
+      margin-top: 10px;
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="main">
+  <div class="para">
+    <div class="login">
+      <div class="head"><h2>Login</h2></div>
+
+      <input class="t1" type="text" placeholder="Username" required>
+      <input class="t2" id="pass" type="password" placeholder="Password" required>
+
+      <div class="checkbox-block">
+        <label><input type="checkbox" name="remember"> Remember Me</label>
+        <span class="show-pass">Show Password</span>  
+      </div>
+
+      <button class="sign" type="submit">Sign In</button>
+
+      <div class="forgot">
+        <div class="find">Forget Password?</div>
+        <div class="sig">Signup</div>
+      </div>
+
+      <button class="google-btn">Sign in with Google</button>
+
+      <div class="extra-info">Don't have an account? <span class="sig" style="text-decoration: underline;">Create one</span></div>
+    </div>
+
+    <div class="pa">
+      <div class="c1"></div>
+      <div class="c2"></div>
+      <div class="c3"></div>
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+</html>
