@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04-06-2025 tasks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; 
+            background-color: #f9f9f9; 
+        }
+
+        .head {
+            width: 100%;
+            border: 1px solid black; 
+            display: flex; 
+            flex-direction: row; 
+            justify-content: space-around; 
+            align-items: center; 
+            position: relative; 
+            padding: 10px 0; 
+            background-color: #000;
+        } 
+      
+        .home, .about, .products, .retail, .profile {
+            width: 100px;
+            background-color: #f0f0f0;
+            text-align: center; 
+            padding: 10px; 
+            cursor: pointer;
+            border-bottom: 1px solid #ccc;
+            border-radius: 15%;
+            box-shadow:  0 5px 10px rgba(67, 155, 145, 0.8);
+        }
+
+        .child2 {
+            display: none; 
+            position: absolute;
+            top: 100%; 
+            left: 0;
+            width: 100%; 
+            background-color: white;
+            border: 1px solid #ccc;
+            box-shadow: 0 20px 8px rgba(0,0,0,0.2);
+        }
+
+        .retail:hover .child2, .about:hover .child2, .home:hover .child2, .profile:hover .child2, .products:hover .child2 {
+            display: block;
+        }
+
+        .smenu {
+            padding: 8px; 
+            border-bottom: 1px solid #eee;
+            text-align: center;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            top: 0px;
+            left: 0px;
+        }
+
+        .smenu:hover {
+            background-color: #4f7b7d; 
+        }
+
+        .profile img {
+            width: 20px; 
+            height: 20px; 
+            vertical-align: middle; 
+        } 
+        .info-header {
+            text-align: center;
+            font-size: 36px; 
+            font-weight: bold;
+            color: #000; 
+            margin: 20px 0;
+        }
+
+        .info-separator {
+            width: 70%; 
+            height: 2px;
+            background-color: #5c4b8a; 
+            margin: 0 auto; 
+        }
+    </style>
+</head>
+<body>
+    <div class="info-header">INFORMATION</div>
+    <div class="info-separator"></div> 
+
+    <div class="head">
+        <div class="logo">
+            <img src="https://images-platform.99static.com//stZpFSlgo-84NpYmEosPfEu2te8=/479x42:1396x959/fit-in/500x500/99designs-contests-attachments/98/98379/attachment_98379445" alt="none">
+        </div>
+        <div class="home">
+            <div class="child1">HOME</div>
+            <div class="child2">
+                <div class="smenu">Services</div>
+                <div class="smenu">Maintenance</div>
+                <div class="smenu">Warranty</div>
+                <div class="smenu">Customer care</div>
+            </div>
+        </div>
+        <div class="about">
+            <div class="child1">ABOUT</div>
+            <div class="child2">
+                <div class="smenu">HP</div>
+                <div class="smenu">ASUS</div>
+                <div class="smenu">LENOVO</div>
+                <div class="smenu">DELL</div>
+            </div>
+        </div>
+        <div class="products">
+            <div class="child1">PRODUCTS</div>
+            <div class="child2">
+                <div class="smenu">Laptops</div>
+                <div class="smenu">PC</div>
+                <div class="smenu">Accessories</div>
+                <div class="smenu">Hardware</div>
+            </div>
+        </div>
+        <div class="retail">
+            <div class="child1">RETAIL</div>
+            <div class="child2">
+                <div class="smenu">Online</div>
+                <div class="smenu">Store</div>
+            </div>
+        </div>
+        <div class="profile">
+            <div class="child1">
+                <img src="https://cdn-icons-png.flaticon.com/512/1077/1077114.png" alt="Profile Icon"> 
+            </div>
+            <div class="child2">
+                <div class="smenu">Logout</div>
+                <div class="smenu">Reset Password</div>
+                <div class="smenu">Edit Profile</div>
+                <div class="smenu">Switch Account</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
