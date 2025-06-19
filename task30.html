@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scenic Animation</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {height: 100vh;
+  background: linear-gradient(to top, #ffa500, #87ceeb);
+  overflow: hidden;
+  position: relative;
+  font-family: sans-serif;
+  animation: backgroundShift 10s linear forwards;
+    }
+    .road {
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      width: 100%;
+      height: 140px;
+      background: #111;
+      z-index: 1;
+    }
+    .dash {
+      position: absolute;
+      bottom: 60px;
+      width: 150px;
+      height: 30px;
+      background: #aaa;
+      z-index: 2;
+    }
+    .dash1 { left: 60px; }
+    .dash2 { left: 280px; }
+    .dash3 { left: 520px; }
+    .dash4 { left: 800px; }
+    .dash5 { left: 1050px; }
+    .dash6 { left: 1250px; }
+    .dash7 { left: 1500px; }
+    .dash8 { left: 1750px; }
+    .dash9 { left: 2000px; }
+    
+    .sun {
+      width: 150px;
+      height: 150px;
+      background: yellow;
+      border-radius: 50%;
+      position: absolute;
+      top: 50px;
+      right: 100px;
+      box-shadow: 0 0 40px yellow;
+      animation: sunfade 10s linear forwards;
+    }
+    @keyframes sunFade {
+  0%, 40% { opacity: 1; }
+  41%, 100% { opacity: 0; }
+}
+
+/* Moon styling and fade-in */
+.moon {
+  width: 150px;
+  height: 150px;
+  background: #eee;
+  border-radius: 50%;
+  position: absolute;
+  top: 50px;
+  right: 100px;
+  box-shadow: 0 0 40px #ccc;
+  opacity: 0;
+  animation: moonAppear 10s linear forwards;
+}
+
+@keyframes moonAppear {
+  0%, 40% { opacity: 0; }
+  41%, 100% { opacity: 1; }
+}
+
+    .cloud {
+      background: white;
+      border-radius: 50%;
+      position: absolute;
+    }
+
+    .cloud1 {
+      width: 150px;
+      height: 110px;
+      top: 140px;
+      box-shadow: 0 0 10px 3px grey;
+      left: 180px;
+    }
+    .cloud1::before,
+    .cloud1::after {
+      content: '';
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      box-shadow: 0 0 10px 3px grey;
+    }
+    .cloud1::before {
+      width: 80px;
+      height: 90px;
+      left: -45px;
+      top: 15px;
+    }.cloud1::after{
+        width: 80px;
+      height: 90px;
+      right: 155px;
+      top: 15px;
+    }
+    
+
+    .cloud2 {
+      width: 150px;
+      height: 110px;
+      box-shadow: 0 0 10px 3px grey;
+      top: 240px;
+      right: 190px;
+    }
+
+    .cloud2::before,
+    .cloud2::after {
+      content: '';
+      position: absolute;
+      background: white;
+      box-shadow: 0 0 10px 3px grey;
+      border-radius: 50%;
+    }
+
+    .cloud2::before {
+      width: 80px;
+      height: 90px;
+      left: -35px;
+      top: 15px;
+    }
+
+    .cloud2::after { 
+        width: 80px;
+      height: 90px;
+      right: 155px; 
+      top: 15px;
+    }
+
+    .tree {
+      position: absolute;
+      bottom: 100px;
+      left: 10px;
+    }
+
+    .tree .trunk {
+      width: 50px;
+      height: 200px;
+      background: #5b3b00;
+      margin: auto;
+      border-radius: 10px;
+    }
+
+    .tree .leaves {
+      background: #2e8b57;
+      border-radius: 50%;
+      position: relative;
+      margin: auto;
+    }
+
+    .tree1 {
+      right: 100px;
+    }
+
+    .tree1 .leaves {
+      width: 80px;
+      height: 80px;
+    }
+
+    .tree2 {
+      left: 370px;
+    }
+
+    .tree2 .leaves {
+      width: 60px;
+      height: 60px;
+    }
+
+    .tree3 {
+      left: 800px;
+    }
+
+    .tree3 .leaves {
+      width: 80px;
+      height: 80px;
+    }
+    
+    .leaves {
+      position: absolute;
+      top: 40px;
+      left: 0;
+      z-index: 4;
+    }
+    .leaf {
+      width: 60px;
+      height: 74px;
+      background: #3fa34d;
+      border-radius: 50%;
+      position: absolute;
+      border: 2px solid #222;
+    }
+    .leaf1 { top: 5px; left: -10px; }
+    .leaf2 { top: 0; left: 28px; }
+    .leaf3 { top: -25px; left: 9px; }
+
+    .tree1 { left: 40px; }
+    .tree2 { left: 110px; }
+
+    .mountains {
+      position: absolute;
+      bottom: 130px;
+      left: 0;
+    }
+
+    .mountain {
+      width: 0px;
+      height: 0px;
+      border-left: 250px solid transparent;
+      border-right: 250px solid transparent;
+      border-bottom: 500px solid #4b3b3b;
+      display: inline-block;
+    }
+
+    .mountain + .mountain {
+      margin-left: -40px;
+      border-bottom-color: #5b4b4b;
+    }
+
+    .bird {
+        position: absolute;
+      top: 30px;
+      left: 40px;
+      font-size: 24px;
+      animation: fly 10s linear infinite;
+    }
+    .bird img{
+        
+      width: 100px;
+      height: 100px;
+    }
+    @keyframes fly {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(100vw); }
+    }
+    .car {
+        position: absolute;
+      bottom: -40px;
+      left: 40px;
+      font-size: 100px;
+      animation: cars 10s linear infinite;
+    }
+    .car img{
+        
+      width: 400px;
+      height: 400px;
+    }
+    @keyframes cars{
+        from{ transform: translateX(100vw);}
+        to{ transform: translateY(0);}
+    }
+    @keyframes backgroundShift {
+  0% { background: linear-gradient(to top, #ffa500, #87ceeb); }
+  40% { background: linear-gradient(to top, #ffa500, #87ceeb); } 
+  41% { background: linear-gradient(to top, #0d1b2a, #1b263b); }
+  100% { background: linear-gradient(to top, #0d1b2a, black); }
+}
+
+
+  </style>
+</head>
+<body>
+
+  <div class="sun"></div>
+    <div class="moon"></div>
+
+  <div class="cloud cloud1"></div>
+  <div class="cloud cloud2"></div>
+
+  <div class="mountains">
+    <div class="mountain"></div>
+    <div class="mountain"></div>
+    <div class="mountain"></div>
+  </div>
+
+  <div class="tree tree1"><div class="leaves">
+      <div class="leaf leaf1"></div>
+      <div class="leaf leaf2"></div>
+      <div class="leaf leaf3"></div>
+    </div>
+    <div class="trunk"></div>
+  </div>
+
+  <div class="tree tree2"><div class="leaves">
+      <div class="leaf leaf1"></div>
+      <div class="leaf leaf2"></div>
+      <div class="leaf leaf3"></div>
+    </div>
+    <div class="trunk"></div>
+  </div>
+
+  <div class="tree tree3"><div class="leaves">
+      <div class="leaf leaf1"></div>
+      <div class="leaf leaf2"></div>
+      <div class="leaf leaf3"></div>
+    </div>
+    <div class="trunk"></div>
+  </div>
+  
+  <div class="road"></div>
+  <div class="dash dash1"></div>
+  <div class="dash dash2"></div>
+  <div class="dash dash3"></div>
+  <div class="dash dash4"></div>
+  <div class="dash dash5"></div>
+  <div class="dash dash6"></div>
+  <div class="dash dash7"></div>
+  <div class="dash dash8"></div>
+  <div class="dash dash9"></div>
+  <div class="bird"><img src="bird.png" alt=""></div>
+
+  <div class="car"><img src="car.png" alt="none"></div>
+
+</body>
+</html>
