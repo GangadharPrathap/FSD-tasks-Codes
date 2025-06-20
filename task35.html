@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>17-06-2025 tasks</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background-color: lightgray;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      perspective: 1000px;
+    }
+
+    .scene {
+      width: 600px;
+      height: 500px;
+      position: relative;
+      transform-style: preserve-3d;
+      transform: rotateX(10deg) rotateY(0deg);
+    }
+
+    .cent, .left, .right, .top, .bottom {
+      position: absolute;
+      width: 600px;
+      height: 500px;
+      background-color: #fdfdfd;
+      box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.08);
+    }
+    .cent {
+      transform: translateZ(-250px);
+    }
+    .left {
+      transform-origin: left;
+      transform: rotateY(90deg) translateZ(-300px);
+    }
+    .right {
+      transform-origin: right;
+      transform: rotateY(-90deg) translateZ(-300px);
+    }
+    .top {
+      transform-origin: top;
+      transform: rotateX(270deg) translateY(-270px);
+    }
+    .bottom {
+      transform-origin: bottom;
+      transform: rotateX(270deg) translateY(-270px);
+      box-shadow: 0 10px chocolate;
+    }
+
+    .l1 {
+      width: 100%;
+      height: 100%;
+      background-color: aquamarine;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div class="scene">
+    <div class="cent"></div>
+
+    <div class="left">
+      <div class="l1">..............</div>
+    </div>
+
+    <div class="right"></div>
+    <div class="top"></div>
+    <div class="bottom"></div>
+  </div>
+</body>
+</html>
