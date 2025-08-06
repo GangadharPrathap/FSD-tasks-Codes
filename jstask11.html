@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05-08-2025</title>
+    <style>
+        body {
+            width: 100svw;
+            height: 100svh;
+            font-size: 30px;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button-64 {
+            align-items: center;
+            background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+            border: 0;
+            border-radius: 8px;
+            box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+            box-sizing: border-box;
+            color: #FFFFFF;
+            display: flex;
+            font-family: Phantomsans, sans-serif;
+            font-size: 20px;
+            justify-content: center;
+            line-height: 1em;
+            max-width: 100%;
+            min-width: 140px;
+            padding-top: 3px;
+            text-decoration: none;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            white-space: nowrap;
+            cursor: pointer;
+            position: relative;
+            top: 10px;
+        }
+
+        .button-64:active,
+        .button-64:hover {
+            outline: 0;
+        }
+
+        .button-64 span {
+            padding: 16px 24px;
+            border-radius: 6px;
+            width: 100%;
+            height: 100%;
+            transition: 300ms;
+        }
+
+        .timer {
+            width: 40%;
+            height: 80%;
+            border-radius: 50%;
+            background-color: rgb(5, 222, 255);
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 10px 0 0 blur white;
+
+        }
+
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .minutes,
+        .seconds {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            gap: 10px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            color: white;
+        }
+
+        #lol {
+            position: relative;
+            top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="timer">
+        <h1>Focus mode</h1>
+        <div class="main">
+            <div class="minutes"></div>:
+            <div class="seconds"></div>
+        </div>
+        <button class="button-64" role="button" onclick="start()"><span class="text">Focus mode</span></button>
+        <button class="button-64" id="lol" role="button" onclick="stop()"><span class="text">Stop Focus
+                mode</span></button>
+    </div>
+
+</body>
+<script src="taskjs11.js"></script>
+
+</html>
